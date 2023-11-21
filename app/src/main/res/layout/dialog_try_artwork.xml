@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_000000_50"
+        android:gravity="center">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctlContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:background="@drawable/bg_container_radius_24"
+            android:backgroundTint="@color/color_05060A"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_close"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imgArtwork"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="17dp"
+                android:layout_marginTop="9dp"
+                android:src="@mipmap/ic_sample_trending"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintTop_toBottomOf="@+id/imgClose"
+                app:riv_corner_radius="8dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="9dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/imgArtwork"
+                app:layout_constraintEnd_toEndOf="@+id/imgArtwork">
+
+                <com.apero.realistic.layout.RealisticItemArtworkCountLayout
+                    android:id="@+id/viewDownload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                </com.apero.realistic.layout.RealisticItemArtworkCountLayout>
+
+                <com.apero.realistic.layout.RealisticItemArtworkCountLayout
+                    android:id="@+id/viewLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="12dp">
+
+                </com.apero.realistic.layout.RealisticItemArtworkCountLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPromptTitle"
+                style="@style/BaseFontRebondRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="17dp"
+                android:layout_marginTop="16dp"
+                android:text="Prompt"
+                android:textColor="@color/color_555555"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgArtwork" />
+
+            <TextView
+                android:id="@+id/tvPromptContent"
+                style="@style/BaseFontRebondRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="17dp"
+                android:layout_marginTop="16dp"
+                android:lines="2"
+                android:text="1girl, bob cut, brunette, straight hair, earrings, black leather jacket,"
+                android:textColor="@color/color_999999"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPromptTitle" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPromptContent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/bg_generate_active" />
+
+                <LinearLayout
+                    android:id="@+id/lnTryThis"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_try_artwork" />
+
+                    <TextView
+                        style="@style/BaseFontSwitzerBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Try This"
+                        android:textColor="@color/color_010101"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

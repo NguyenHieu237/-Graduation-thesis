@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="2dp"
+        android:paddingTop="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/BaseFontRebondBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:text="Negative Prompt"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                style="@style/BaseFontSwitzerRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="4dp"
+                android:text="Content"
+                android:textColor="@color/color_777777"
+                android:textSize="12sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_container_stroke_gradient_radius_8">
+
+                <EditText
+                    android:id="@+id/edtPrompt"
+                    style="@style/BaseFontSwitzerRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="Content"
+                    android:inputType="textMultiLine"
+                    android:maxLength="500"
+                    android:maxLines="10"
+                    android:minLines="3"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:singleLine="false"
+                    android:textColor="@color/color_FFFFFF"
+                    android:textColorHint="@color/color_777777"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/lnPromptHistory"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.52"
+                    tools:layout_editor_absoluteX="12dp" />
+
+                <LinearLayout
+                    android:id="@+id/lnPromptHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvPromptCount"
+                            style="@style/BaseFontSwitzerBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00"
+                            android:textColor="@color/color_FFFFFF"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            style="@style/BaseFontSwitzerRegular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/500"
+                            android:textColor="@color/color_777777"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/BaseFontRebondBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:text="Alpha"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                style="@style/BaseFontSwitzerRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="4dp"
+                android:text="Content"
+                android:textColor="@color/color_777777"
+                android:textSize="12sp" />
+
+            <com.apero.realistic.widget.rangeseekbar.RangeSeekBar
+                android:id="@+id/seekBarAlpha"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:active="true"
+                app:centerColor="@color/color_A1C0DE"
+                app:enableGradient="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:maxValue="10"
+                app:minValue="0"
+                app:roundedCorners="true"
+                app:showAdditionalText="above"
+                app:showThumbsText="center"
+                app:textColor="@color/color_000000"
+                app:transitionColor="@color/color_F7CDC1"
+                app:unActiveLeftBarColor="@color/color_A1C0DE_30"
+                app:unActiveRightBarColor="@color/color_F7CDC1_30" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/BaseFontRebondBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:text="Strength"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                style="@style/BaseFontSwitzerRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="4dp"
+                android:text="Content"
+                android:textColor="@color/color_777777"
+                android:textSize="12sp" />
+
+            <com.apero.realistic.widget.rangeseekbar.RangeSeekBar
+                android:id="@+id/seekBarStrength"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:active="true"
+                app:centerColor="@color/color_A1C0DE"
+                app:enableGradient="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:maxValue="10"
+                app:minValue="0"
+                app:roundedCorners="true"
+                app:showAdditionalText="above"
+                app:showThumbsText="center"
+                app:textColor="@color/color_000000"
+                app:transitionColor="@color/color_F7CDC1"
+                app:unActiveLeftBarColor="@color/color_A1C0DE_30"
+                app:unActiveRightBarColor="@color/color_F7CDC1_30" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/BaseFontRebondBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:text="Guidance scale"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                style="@style/BaseFontSwitzerRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="4dp"
+                android:text="Content"
+                android:textColor="@color/color_777777"
+                android:textSize="12sp" />
+
+            <com.apero.realistic.widget.rangeseekbar.RangeSeekBar
+                android:id="@+id/seekBarScale"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:active="true"
+                app:centerColor="@color/color_A1C0DE"
+                app:enableGradient="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:maxValue="10"
+                app:minValue="0"
+                app:roundedCorners="true"
+                app:showAdditionalText="above"
+                app:showThumbsText="center"
+                app:textColor="@color/color_000000"
+                app:transitionColor="@color/color_F7CDC1"
+                app:unActiveLeftBarColor="@color/color_A1C0DE_30"
+                app:unActiveRightBarColor="@color/color_F7CDC1_30" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/BaseFontRebondBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:text="Step"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                style="@style/BaseFontSwitzerRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="4dp"
+                android:text="Content"
+                android:textColor="@color/color_777777"
+                android:textSize="12sp" />
+
+            <com.apero.realistic.widget.rangeseekbar.RangeSeekBar
+                android:id="@+id/seekBarStep"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:active="true"
+                app:centerColor="@color/color_A1C0DE"
+                app:enableGradient="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:maxValue="100"
+                app:minValue="0"
+                app:roundedCorners="true"
+                app:showAdditionalText="above"
+                app:showThumbsText="center"
+                app:textColor="@color/color_000000"
+                app:transitionColor="@color/color_F7CDC1"
+                app:unActiveLeftBarColor="@color/color_A1C0DE_30"
+                app:unActiveRightBarColor="@color/color_F7CDC1_30" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/BaseFontRebondBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:text="Seed"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                style="@style/BaseFontSwitzerRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="4dp"
+                android:text="Content"
+                android:textColor="@color/color_777777"
+                android:textSize="12sp" />
+
+            <com.apero.realistic.widget.rangeseekbar.RangeSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:active="true"
+                app:centerColor="@color/color_A1C0DE"
+                app:enableGradient="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:maxValue="100"
+                app:minValue="0"
+                app:roundedCorners="true"
+                app:showAdditionalText="above"
+                app:showThumbsText="center"
+                app:textColor="@color/color_000000"
+                app:transitionColor="@color/color_F7CDC1"
+                app:unActiveLeftBarColor="@color/color_A1C0DE_30"
+                app:unActiveRightBarColor="@color/color_F7CDC1_30" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

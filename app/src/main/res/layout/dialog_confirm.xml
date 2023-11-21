@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_000000_50"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_container_radius_8"
+                android:backgroundTint="@color/color_25262A"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="16dp">
+
+                <ImageView
+                    android:id="@+id/imgClose"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_close_grey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvOutOf"
+                    style="@style/BaseFontRebondBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:text="@string/do_you_want"
+                    android:textColor="@color/color_FFFFFF"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgClose" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    style="@style/BaseFontSwitzerRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="@string/content"
+                    android:textColor="@color/color_999999"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvOutOf"
+                    tools:layout_editor_absoluteX="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:paddingHorizontal="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+                    <Button
+                        android:id="@+id/btnCancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_container_style_category_selected_radius_8"
+                        android:text="@string/cancel"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_010101"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btnOK"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_container_radius_8"
+                        android:backgroundTint="#25262A"
+                        android:text="@string/tt_label_ok"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_999999"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

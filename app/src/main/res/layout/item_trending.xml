@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctlRoot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imgArtwork"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_sample_trending"
+                app:riv_corner_radius="8dp"
+                tools:layout_editor_absoluteX="-71dp"
+                tools:layout_editor_absoluteY="-55dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <com.apero.realistic.layout.RealisticItemArtworkCountLayout
+                    android:id="@+id/viewDownload"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="1">
+
+                </com.apero.realistic.layout.RealisticItemArtworkCountLayout>
+
+                <com.apero.realistic.layout.RealisticItemArtworkCountLayout
+                    android:id="@+id/viewLike"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="3dp"
+                    android:layout_weight="1">
+
+                </com.apero.realistic.layout.RealisticItemArtworkCountLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

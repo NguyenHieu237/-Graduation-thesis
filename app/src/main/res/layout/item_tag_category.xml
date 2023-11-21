@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/lnContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.veeyaar.supergradienttextview.GradientTextView
+                android:id="@+id/tvTagCategorySelected"
+                style="@style/BaseFontRebondBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="14sp"
+                app:endColor="@color/color_A1C0DE"
+                app:isVertical="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:startColor="@color/color_F7CDC1"
+                tools:text="@string/app_name" />
+
+            <TextView
+                android:id="@+id/tvTagCategoryUnSelected"
+                style="@style/BaseFontSwitzerRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_999999"
+                android:textSize="14sp"
+                android:visibility="gone"
+                tools:text="@string/app_name"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewSelected"
+            android:layout_width="32dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_container_style_category_selected" />
+
+    </LinearLayout>
+
+</layout>

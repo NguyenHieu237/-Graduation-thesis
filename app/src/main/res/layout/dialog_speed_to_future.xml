@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_000000_50"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="37dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_container_radius_8"
+                android:backgroundTint="@color/color_25262A"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:id="@+id/imgClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/ic_close_white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/image"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="-10dp"
+                    android:src="@drawable/speed_to_future"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtOutOf"
+                    style="@style/BaseFontRebondBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-30dp"
+                    android:gravity="center"
+                    android:text="@string/speed_to_future"
+                    android:textColor="@color/color_FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/image" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    style="@style/BaseFontSwitzerRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="@string/you_should_use"
+                    android:textColor="@color/color_999999"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/txtOutOf"
+                    tools:layout_editor_absoluteX="16dp" />
+
+                <LinearLayout
+                    android:id="@+id/linerGoPremium"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/bg_container_style_category_selected_radius_8"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_diamond" />
+
+                    <TextView
+                        style="@style/BaseFontSwitzerBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/go_premium"
+                        android:textColor="@color/color_010101"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

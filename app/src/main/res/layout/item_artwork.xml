@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="160dp"
+        android:layout_height="160dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctlRoot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imgArtwork"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_artwork_sample"
+                app:riv_corner_radius="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <com.apero.realistic.layout.RealisticItemArtworkCountLayout
+                    android:id="@+id/viewDownload"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="1">
+
+                </com.apero.realistic.layout.RealisticItemArtworkCountLayout>
+
+                <com.apero.realistic.layout.RealisticItemArtworkCountLayout
+                    android:id="@+id/viewLike"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="3dp"
+                    android:layout_weight="1">
+
+                </com.apero.realistic.layout.RealisticItemArtworkCountLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

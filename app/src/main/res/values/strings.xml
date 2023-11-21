@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">AI Realistic</string>
+    <string name="application_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="facebook_app_id" translatable="false">903610640714477</string>
+    <string name="facebook_token_id" translatable="false">1a1cb28a5f7066a0be40f81dbc14d35e</string>
+    <string name="languages">Languages</string>
+    <string name="english">English</string>
+    <string name="spanish">Spanish</string>
+    <string name="french">French</string>
+    <string name="hindi">Hindi</string>
+    <string name="portuguese">Portuguese</string>
+    <string name="russian">Russian</string>
+    <string name="choose_language_warning">Please choose a language</string>
+
+    <string name="setting">Setting</string>
+    <string name="general_setting">General setting</string>
+    <string name="language">Language</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="term_of_service">Term of service</string>
+    <string name="out_of_credits">Out Of Credits</string>
+    <string name="you_used_up">You’ve used up your free creations for today.\n Come back tomorrow or Try AI Pro  for unlimited generations!</string>
+    <string name="go_premium">Go Premium</string>
+    <string name="speed_to_future">Speed to Future</string>
+    <string name="you_should_use">You should use the premium packages to use the <b>Unlimited Generations</b>  of the app</string>
+    <string name="do_you_want"> "Do you want to stop generating this art?" </string>
+    <string name="content">Content.</string>
+    <string name="your_work_is_in">Your work is in processing…</string>
+    <string name="please_dont_exit">Please don’t exit the app, it may takes a few seconds </string>
+    <string name="too_slow">Too slow? You can generate faster by speed</string>
+    <string name="speed">Speed</string>
+
+</resources>
+

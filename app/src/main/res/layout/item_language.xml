@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/container"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_language_item_selected"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ImageView
+            android:id="@+id/img_language"
+            tools:src="@drawable/bg_purcharse"
+            android:layout_marginVertical="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            style="@style/BaseFontRebondRegular"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            tools:text="@tools:sample/full_names"
+            android:layout_toEndOf="@id/img_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/checkbox"
+            android:src="@drawable/ic_radio_unchecked"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+</layout>

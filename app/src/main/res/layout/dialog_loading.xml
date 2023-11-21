@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg_splash">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="17dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/gifImageView2"
+            app:layout_constraintTop_toBottomOf="@+id/imgBack">
+
+            <TextView
+                android:id="@+id/tvSpeed"
+                style="@style/BaseFontRebondBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:gravity="center"
+                android:text="@string/your_work_is_in"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/BaseFontSwitzerRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="@string/please_dont_exit"
+                android:textColor="@color/color_777777"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/tvSpeed"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/gifImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp" />
+
+        </LinearLayout>
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gifImageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginBottom="-50dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtToo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtToo"
+            style="@style/BaseFontSwitzerRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="@string/too_slow"
+            android:textColor="@color/color_777777"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/lnSpeed"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <LinearLayout
+            android:id="@+id/lnSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="34dp"
+            android:background="@drawable/bg_container_radius_8"
+            android:backgroundTint="#54542B"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="20dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_thunder" />
+
+            <TextView
+                style="@style/BaseFontSwitzerBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="4dp"
+                android:text="@string/speed"
+                android:textColor="@color/color_FFFFAA" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
